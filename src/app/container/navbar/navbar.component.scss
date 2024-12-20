@@ -1,0 +1,99 @@
+.card-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Alinea los elementos verticalmente */
+    text-align: center;
+    padding: 20px;
+    gap: 15px;
+    background-color: #69247C;
+}
+
+.logo {
+    flex: 1; /* El logo ocupa espacio proporcional */
+    text-align: start; /* Alineación a la izquierda */
+    color: #F9E6CF;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.btn-client {
+    display: flex;
+    gap: 10px;
+    max-width: 350px; /* Ancho máximo del formulario */
+    flex: 1; /* Ocupa espacio proporcional */
+    justify-content: center; /* Centra el formulario horizontalmente */
+}
+
+.btn-client input {
+    flex: 1;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.btn-client button {
+    height: 30px;
+    padding: 0 15px;
+    color: #F9E6CF;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #DA498D;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.btn-client button:hover {
+    background-color: #FF2929;
+}
+
+.card-list {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: #F9E6CF;
+    font-weight: bold;
+}
+.client-name {
+    flex: 1;
+    text-align: end;
+    color: #F9E6CF;
+    font-weight: bold;
+    white-space: nowrap;
+    width: 200px; /* Reserva el espacio fijo */
+}
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column; /* Cambia a disposición vertical */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .btn-client {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .card-list {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .client-name {
+        text-align: center;
+        padding-left: 0;
+    }
+}

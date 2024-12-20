@@ -1,0 +1,84 @@
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-item {
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #DA498D;
+    width: 150px; /* Ancho base para pantallas grandes */
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px; /* Opcional: bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.card-product {
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en columna */
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre los elementos */
+}
+
+.product-price {
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.btn-product {
+    border: none;
+    background-color: #DA498D;
+    font-weight: bold;
+    padding: 5px;
+    color: #F9E6CF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-product:hover {
+    background-color: #FF2929;
+}
+
+/* Media Queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a una disposición vertical */
+        gap: 15px; /* Reduce el espacio entre tarjetas */
+    }
+
+    .card-item {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 300px; /* Ancho máximo */
+        margin: 0 auto; /* Centra las tarjetas */
+    }
+
+    .btn-product {
+        width: 100%; /* Botón ocupa todo el ancho */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-item {
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+    }
+
+    .product-price {
+        font-size: 0.8rem; /* Ajusta el tamaño del precio */
+    }
+
+    .btn-product {
+        font-size: 0.8rem; /* Botón más pequeño */
+        padding: 5px 10px; /* Reduce el tamaño del padding */
+    }
+}

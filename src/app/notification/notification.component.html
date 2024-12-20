@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="card-item" *ngFor="let product of productos">
+        <div class="card-product">
+         <span  class="product-name">{{product.nombre | titlecase}}</span>   
+          <span class="product-price">{{product.precio | currency: 'PEN'}}</span> 
+          <button class="btn-product">Comprar ya</button> 
+        </div>        
+    </div>
+</div>

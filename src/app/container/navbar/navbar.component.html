@@ -1,0 +1,16 @@
+<div class="card-container">
+  <h1 class="logo">Ctm'S</h1>
+  <div class="btn-client">
+    <input type="text" placeholder="Indica tu nombre cliente tarao" [(ngModel)]="clientName" appOnlyText>
+    <button (click)="addClient()">Llamame</button>
+  </div>
+  <ul class="card-list">
+    <li>Compra</li>
+    <li>Nosotros</li>
+    <li>Tips Belleza</li>
+    <li>Blog</li>
+  </ul>
+  <h3 class="client-name">
+    <span *ngIf="client.nombre">Bienvenido, {{ client.nombre | titlecase }}!</span>
+  </h3>
+</div>
